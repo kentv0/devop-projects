@@ -1,4 +1,4 @@
-Devops Project
+Infrastructure
 ======
 Introduction
 ------
@@ -35,6 +35,12 @@ Installing Docker
     *
 3. Verify
 
+    *
+    *
+
+Installing GitLab
+------
+1. Install
     *
     *
 
