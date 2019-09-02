@@ -52,8 +52,8 @@ Installing Docker Desktop
         ```
 4. Run
     * Launch Docker Desktop
-        * On MacOS, hold down the ```Command``` key then press the ```Spacebar``` key and search "docker"
-        * On Windows, press the ```Windows``` key and search "docker"
+        * On MacOS, hold down the ```Command Key``` then press the ```Spacebar Key``` and search "docker"
+        * On Windows, press the ```Windows Key``` and search "docker"
 5. Verify Running
     * Open a ```Terminal```
     * Enter the following command:
@@ -82,18 +82,18 @@ Installing Nexus Repository Manager
 1. Install
     * Open a ```Terminal```
     * Enter the following command:
-    ```tcsh
-    $ docker run -d -p 8081:8081 --name nexus --restart always sonatype/nexus3
-    ```
+       ```tcsh
+       $ docker run -d -p 8081:8081 --name nexus --restart always sonatype/nexus3
+       ```
     * Verify
-    ```tcsh
-    $ docker ps
-    ```
+       ```tcsh
+       $ docker ps
+       ```
     * Expected output should be:
-    ```tcsh
-    CONTAINER ID    IMAGE               COMMAND                     CREATED         STATUS          PORTS                       NAMES
-    2ed52ew323dd    sonatype/nexus3     "sh -c ${SONATYPE_DI..."    4 weeks ago     Up 1 second     0.0.0.0:8081->8081/tcp      nexus
-    ```
+       ```tcsh
+       CONTAINER ID    IMAGE               COMMAND                     CREATED         STATUS          PORTS                       NAMES
+       2ed52ew323dd    sonatype/nexus3     "sh -c ${SONATYPE_DI..."    4 weeks ago     Up 1 second     0.0.0.0:8081->8081/tcp      nexus
+       ```
 3. Login
     *
     *
