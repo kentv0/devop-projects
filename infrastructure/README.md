@@ -101,7 +101,7 @@ Installing Nexus Repository Manager
         $ docker exec -it 1234abcd /bin/bash
         ```
     * Show the admin password with the command:
-        ```tcsh
+        ```
         $ cat nexus-data/admin.password
         (copy then type "exit" to exit out of container)
         ```
@@ -111,10 +111,8 @@ Installing Nexus Repository Manager
         ![alt text](https://raw.githubusercontent.com/kentv0/devops-project/master/infrastructure/nexus_welcome_page.jpg "Nexus Welcome Page")
 3. Admin Login
     * Click ```Sign in``` from the upper right-hand corner
-        ```
         Username: admin
         Password: (from step 2)
-        ```
 3. Configure
     *
     *
