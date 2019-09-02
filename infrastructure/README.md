@@ -18,7 +18,7 @@ Installing Java
     * Follow the instructions to complete the installation
 3. Verify
     * Open a ```Terminal```
-    * Enter the following command:
+    * Show Java version with the command:
         ```tcsh
         $ java -version
         ```
@@ -35,7 +35,7 @@ Installing Docker Desktop
     * Follow the instructions to complete the installation
 3. Verify Installation
     * Open a ```Terminal```
-    * Enter the following command:
+    * Show Docker version with the command:
         ```tcsh
         $ docker version
         ```
@@ -56,7 +56,7 @@ Installing Docker Desktop
         * On Windows, press the ```Windows Key``` and search "docker"
 5. Verify Running
     * Open a ```Terminal```
-    * Enter the following command:
+    * List Docker containers with the command:
         ```tcsh
         $ docker ps
         ```
@@ -81,24 +81,33 @@ Installing Nexus Repository Manager
 ------
 1. Install
     * Open a ```Terminal```
-    * Enter the following command:
-       ```tcsh
-       $ docker run -d -p 8081:8081 --name nexus --restart always sonatype/nexus3
-       ```
+    * Run Docker image of Nexus with the command:
+        ```tcsh
+        $ docker run -d -p 8081:8081 --name nexus --restart always sonatype/nexus3
+        ```
     * Verify
-       ```tcsh
-       $ docker ps
-       ```
+        ```tcsh
+        $ docker ps
+        ```
     * Expected output should be:
-       ```tcsh
-       CONTAINER ID    IMAGE               COMMAND                     CREATED         STATUS          PORTS                       NAMES
-       2ed52ew323dd    sonatype/nexus3     "sh -c ${SONATYPE_DI..."    4 weeks ago     Up 1 second     0.0.0.0:8081->8081/tcp      nexus
-       ```
-2. Login
+        ```tcsh
+        CONTAINER ID    IMAGE               COMMAND                     CREATED         STATUS          PORTS                       NAMES
+        1234abcd        sonatype/nexus3     "sh -c ${SONATYPE_DI..."    4 weeks ago     Up 1 second     0.0.0.0:8081->8081/tcp      nexus
+        ```
+    * Copy container ID for Nexus (required for next step)
+2. Admin Login
+    * SSH into the Nexus container with the command:
+        ```tcsh
+        $ docker exec -it <CONTAINER_ID> /bin/bash
+        ```
+    * Show the admin password with the command:
+        ```tcsh
+        $ cat nexus-data/admin.password
+        (copy then type "exit" to exit out of container)
+        ```
     * Browse to http://localhost:8081 (it might take a few minutes to finish setting up)
     * Expected page should be:
         
-
 3. Configure
     *
     *
