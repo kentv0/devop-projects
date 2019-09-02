@@ -95,7 +95,7 @@ Installing Nexus Repository Manager
         1234abcd        sonatype/nexus3     "sh -c ${SONATYPE_DI..."    4 weeks ago     Up 1 second     0.0.0.0:8081->8081/tcp      nexus
         ```
     * Copy container ID for Nexus (required for next step)
-2. Admin Login
+2. Admin Password
     * SSH into the Nexus container with the ID and the command:
         ```tcsh
         $ docker exec -it 1234abcd /bin/bash
@@ -109,8 +109,12 @@ Installing Nexus Repository Manager
     * Expected page should be:
     
         ![alt text](https://raw.githubusercontent.com/kentv0/devops-project/master/infrastructure/nexus_welcome_page.jpg "Nexus Welcome Page")
-    * Click ```Sign in``` from the upper right-hand
-    * Enter ```admin``` into username and the admin password previously acquired
+3. Admin Login
+    * Click ```Sign in``` from the upper right-hand corner
+        ```
+        Username: admin
+        Password: (from step 2)
+        ```
 3. Configure
     *
     *
