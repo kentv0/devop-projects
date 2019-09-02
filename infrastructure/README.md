@@ -109,13 +109,15 @@ Installing Nexus Repository Manager
     * Browse to http://localhost:8081 (it might take a few minutes to finish setting up)
     * Expected page should be:
     
-        ![alt text](https://raw.githubusercontent.com/kentv0/devops-project/master/infrastructure/nexus_welcome_page.jpg "Nexus Welcome Page")
-    * Click ```Sign in``` from the upper right-hand corner of the page
+        ![alt text](https://raw.githubusercontent.com/kentv0/devops-project/master/infrastructure/nexus_welcome_page.jpg "Login")
+    * Click ```Sign in``` from the top of the page
+        ```
         Username: admin
         Password: (from step 2)
+        ```
 3. Configure
-    * Click ```Server administration and configuration``` cog icon from the top center of the page
-    *
+    * Click ```Server administration and configuration``` cog icon from the top of the page
+    ![alt text](https://raw.githubusercontent.com/kentv0/devops-project/master/infrastructure/nexus_cog_icon.jpg "Server administration and configuration")
     
 Installing Kafka Message Brokers
 ------
