@@ -64,22 +64,36 @@ Installing Docker Desktop
         ```tcsh
         CONTAINER ID    IMAGE    COMMAND    CREATED    STATUS    PORTS    NAMES
         ```
-Installing GitLab
-------
-1. Install
-    *
-    *
+6. Debug
+    * For the following error:
+        ```tcsh
+        Error response from daemon: Bad response from Docker engine
+        ```
+    * Wait a few minutes before attempting to verify again
     
-Installing Nexus Repository Manager
+Installing GitLab
 ------
 1. Install
     * 
     *
     
-2. Verify
-    *
-    *
-    
+Installing Nexus Repository Manager
+------
+1. Install
+    * Open a ```Terminal```
+    * Enter the following command:
+    ```tcsh
+    $ docker run -d -p 8081:8081 --name nexus --restart always sonatype/nexus3
+    ```
+    * Verify
+    ```tcsh
+    $ docker ps
+    ```
+    * Expected output should be:
+    ```tcsh
+    CONTAINER ID    IMAGE               COMMAND                     CREATED         STATUS          PORTS                       NAMES
+    2ed52ew323dd    sonatype/nexus3     "sh -c ${SONATYPE_DI..."    4 weeks ago     Up 1 second     0.0.0.0:8081->8081/tcp      nexus
+    ```
 3. Login
     *
     *
