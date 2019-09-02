@@ -96,9 +96,9 @@ Installing Nexus Repository Manager
         ```
     * Copy container ID for Nexus (required for next step)
 2. Admin Login
-    * SSH into the Nexus container with the command:
+    * SSH into the Nexus container with the ID and the command:
         ```tcsh
-        $ docker exec -it <CONTAINER_ID> /bin/bash
+        $ docker exec -it 1234abcd /bin/bash
         ```
     * Show the admin password with the command:
         ```tcsh
