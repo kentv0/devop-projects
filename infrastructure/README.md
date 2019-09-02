@@ -70,13 +70,7 @@ Installing Docker Desktop
         Error response from daemon: Bad response from Docker engine
         ```
     * Wait a few minutes before attempting to verify again
-    
-Installing GitLab
-------
-1. Install
-    * 
-    *
-    
+
 Installing Nexus Repository Manager
 ------
 1. Install
@@ -176,3 +170,9 @@ Installing Kafka Message Brokers
 ------
 Installing ElasticSearch Search Engine
 ------
+Installing GitLab
+------
+1. Install
+    * 
+    *
+    
