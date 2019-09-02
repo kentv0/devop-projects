@@ -4,24 +4,20 @@ Introduction
 ------
 Prerequisites
 ------
-* Java
 * CPU: 4
 * RAM: 4GB minimum
+* Java (JDK or JRE version 8 or higher)
 
 Installing Java
 ------
 1. Download
-
-    *
-    *
+    * From this link [here](http://www.oracle.com/technetwork/java/javase/downloads "Java Download"), look for the compatible Java version
 2. Install
-
-    *
-    *
+    * Run the downloaded file
+    * Follow the instructions to complete the installation.
 3. Verify
-
-    *
-    *
+    * In a Terminal, verify Java version with the command:
+        * asdf
 
 Installing Docker
 ------
@@ -59,67 +55,6 @@ Installing Nexus Repository Manager
     *
     *
 3. Configure
-
-    *
-    *
-
-Installing Gradle Build Tool
-------
-1. Download
-
-    *
-    *
-2. Install
-
-    *
-    *
-3. Configure
-
-    *
-    *
-4. Verify
-
-    *
-    *
-
-Setting Up Build Environment
-------
-1. Directory Structure
-
-    *
-    *
-2. Build Configuration Script
-
-    *
-    *
-3. Gradle Properties
-
-    *
-    *
-4. Wrapper Script
-
-    *
-    *
-
-Setting Up Spring Boot
-------
-1. Resource Representation Class
-
-    *
-    *
-2. Resource Controller Class
-
-    *
-    *
-3. Application Class
-
-    *
-    *
-4. Executable JAR
-
-    *
-    *
-5. Test
 
     *
     *
