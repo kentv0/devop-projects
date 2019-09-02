@@ -94,10 +94,11 @@ Installing Nexus Repository Manager
        CONTAINER ID    IMAGE               COMMAND                     CREATED         STATUS          PORTS                       NAMES
        2ed52ew323dd    sonatype/nexus3     "sh -c ${SONATYPE_DI..."    4 weeks ago     Up 1 second     0.0.0.0:8081->8081/tcp      nexus
        ```
-3. Login
-    *
-    *
-    
+2. Login
+    * Browse to http://localhost:8081 (it might take a few minutes to finish setting up)
+    * Expected page should be:
+        
+
 3. Configure
     *
     *
