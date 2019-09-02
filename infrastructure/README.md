@@ -105,16 +105,16 @@ Installing Nexus Repository Manager
         $ cat nexus-data/admin.password
         (copy then type "exit" to exit out of container)
         ```
+3. Admin Login
     * Browse to http://localhost:8081 (it might take a few minutes to finish setting up)
     * Expected page should be:
     
         ![alt text](https://raw.githubusercontent.com/kentv0/devops-project/master/infrastructure/nexus_welcome_page.jpg "Nexus Welcome Page")
-3. Admin Login
-    * Click ```Sign in``` from the upper right-hand corner
+    * Click ```Sign in``` from the upper right-hand corner of the page
         Username: admin
         Password: (from step 2)
 3. Configure
-    *
+    * Click ```Server administration and configuration``` cog icon from the top center of the page
     *
     
 Installing Kafka Message Brokers
