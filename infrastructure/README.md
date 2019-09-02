@@ -107,7 +107,8 @@ Installing Nexus Repository Manager
         ```
     * Browse to http://localhost:8081 (it might take a few minutes to finish setting up)
     * Expected page should be:
-        
+    
+        ![alt text](https://raw.githubusercontent.com/kentv0/devops-project/master/infrastructure/nexus_welcome_page.jpg "Nexus Welcome Page")
 3. Configure
     *
     *
