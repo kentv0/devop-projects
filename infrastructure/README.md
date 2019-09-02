@@ -109,6 +109,8 @@ Installing Nexus Repository Manager
     * Expected page should be:
     
         ![alt text](https://raw.githubusercontent.com/kentv0/devops-project/master/infrastructure/nexus_welcome_page.jpg "Nexus Welcome Page")
+    * Click ```Sign in``` from the upper right-hand
+    * Enter ```admin``` into username and the admin password previously acquired
 3. Configure
     *
     *
