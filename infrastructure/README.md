@@ -118,8 +118,10 @@ Installing Nexus Repository Manager
 3. Configure
     * Click ```Server administration and configuration``` cog icon from the top of the page
     * Click ```Repositories``` from the leftside panel under ```Repository```
+    
         ![alt text](https://raw.githubusercontent.com/kentv0/devops-project/master/infrastructure/nexus_cog_icon.jpg "Server administration and configuration")
     * Click ```Create repository``` for 9 of following repositories:
+    
         ```
         Recipe: maven2 (proxy)
         Name: spring-io-milestone
