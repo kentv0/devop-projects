@@ -172,7 +172,3 @@ Installing ElasticSearch Search Engine
 ------
 Installing GitLab
 ------
-1. Install
-    * 
-    *
-    
