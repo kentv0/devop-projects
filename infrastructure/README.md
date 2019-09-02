@@ -117,8 +117,59 @@ Installing Nexus Repository Manager
         ```
 3. Configure
     * Click ```Server administration and configuration``` cog icon from the top of the page
-    ![alt text](https://raw.githubusercontent.com/kentv0/devops-project/master/infrastructure/nexus_cog_icon.jpg "Server administration and configuration")
-    
+    * Click ```Repositories``` from the leftside panel under ```Repository```
+        ![alt text](https://raw.githubusercontent.com/kentv0/devops-project/master/infrastructure/nexus_cog_icon.jpg "Server administration and configuration")
+    * Click ```Create repository``` for 9 of following repositories:
+        ```
+        Recipe: maven2 (proxy)
+        Name: spring-io-milestone
+        Layout policy: Strict
+        Remote storage: https://repo.spring.io/milestone
+        ```
+        ```
+        Recipe: maven2 (proxy)
+        Name: maven-geotools
+        Layout policy: Permissive
+        Remote storage: http://download.osgeo.org/webdav/geotools/
+        ```
+        ```
+        Recipe: maven2 (proxy)
+        Name: maven-reslet
+        Layout policy: Permissive
+        Remote storage: https://maven.reslet.com
+        ```
+        ```
+        Recipe: npm (proxy)
+        Name: somename-npm
+        Remote storage: https://registry.npmjs.org/
+        ```
+        ```
+        Recipe: npm (group)
+        Name: somename-npm-group
+        Member repositories: somename-npm
+        ```
+        ```
+        Recipe: maven2 (hosted)
+        Name: somename-3rdparty
+        Layout policy: Strict
+        ```
+        ```
+        Recipe: maven2 (hosted)
+        Name: somename-releases
+        Layout policy: Strict
+        ```
+        ```
+        Recipe: maven2 (hosted)
+        Name: somename-snapshots
+        Layout policy: Strict
+        ```
+        ```
+        Recipe: maven2 (group)
+        Name: somename-central
+        Member repositories (group in order):
+        maven-public, maven-snapshots, maven-releases, maven-central, somename-snapshots,
+        somename-releases, somename-3rdparty, maven-geotools, spring-io-milestone, maven-reslet
+        ```
 Installing Kafka Message Brokers
 ------
 Installing ElasticSearch Search Engine
