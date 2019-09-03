@@ -83,11 +83,11 @@ Setting Up Build Environment
         ```
 2. Build Configuration Script
     * Change to project's root directory
-        ```tcsh
+        ```
         $ cd projects
         ```
     * Create the "build.gradle" file there
-        ```script
+        ```groovy
         buildscript {
             repositories {
                 mavenLocal()
