@@ -374,14 +374,15 @@ Installing GitLab
 1. Run Docker image of GitLab
     ```tcsh
     $ sudo docker run --detach \
-      --hostname gitlab.example.com \
-      --publish 443:443 --publish 80:80 --publish 22:22 \
+      --hostname localhost.com \
+      --env GITLAB_OMNIBUS_CONFIG="external_url 'http://gitlab.localhost.com/'; gitlab_rails['lfs_enabled'] = true;" \
+      --publish :443 --publish :80 --publish :22 \
       --name gitlab \
       --restart always \
       --volume /srv/gitlab/config:/etc/gitlab \
       --volume /srv/gitlab/logs:/var/log/gitlab \
       --volume /srv/gitlab/data:/var/opt/gitlab \
-      gitlab/gitlab-ce:latest
+      gitlab/gitlab-ee:latest
     ```
 2. Admin login
     * Go to the web interface
