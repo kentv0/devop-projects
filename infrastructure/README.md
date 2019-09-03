@@ -308,7 +308,7 @@ Installing ElasticSearch Search Engine
         ```
     * Insert data
         ```tcsh
-        $ curl -H 'Content-Type: application/json' -XPUT 'http://localhost:9200/<INDEX_NAME>/<INDEX_TYPE>/<ID>' -d
+        $ curl -H 'Content-Type: application/json' -XPUT 'http://localhost:9200/<INDEX_NAME>/<INDEX_TYPE>/<ID>?pretty' -d
         '{
             "name" : "John Doe"
         }'
@@ -362,7 +362,7 @@ Installing ElasticSearch Search Engine
         ```
     * Delete index
         ```tcsh
-        curl -XDELETE 'http://localhost:9200/<INDEX_NAME>'
+        curl -XDELETE 'http://localhost:9200/<INDEX_NAME>?pretty'
         ```
         ```json
         {
