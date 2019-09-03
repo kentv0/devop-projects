@@ -334,7 +334,31 @@ Installing ElasticSearch Search Engine
         $ curl 'http://localhost:9200/<INDEX_NAME>/_search?pretty'
         ```
         ```json
-        
+        {
+          "took" : 5,
+          "timed_out" : false,
+          "_shards" : {
+            "total" : 5,
+            "successful" : 5,
+            "skipped" : 0,
+            "failed" : 0
+          },
+          "hits" : {
+            "total" : 1,
+            "max_score" : 1.0,
+            "hits" : [
+              {
+                "_index" : "<INDEX_NAME>",
+                "_type" : "<INDEX_TYPE>",
+                "_id" : "<ID>",
+                "_score" : 1.0,
+                "_source" : {
+                  "name" : "John Doe"
+                }
+              }
+            ]
+          }
+        }
         ```
 Installing GitLab
 ------
