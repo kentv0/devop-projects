@@ -275,7 +275,7 @@ Installing Kafka Message Brokers
         ```
 Installing ElasticSearch Search Engine
 ------
-1. Set Up Network
+1. Setup
     * Create a Docker network with the command:
         ```tcsh
         $ docker network create <NETWORK_NAME>
@@ -286,15 +286,28 @@ Installing ElasticSearch Search Engine
         ```
     * Network should be included in the expected output:
         ```
-        NETWORK ID          NAME                    DRIVER              SCOPE
-1005b83d5ef6        bridge                  bridge              local
-b7f8d6aa972f        host                    host                local
-bc4094b76759        infra_example_default   bridge              local
-d93c28c958f8        my-network              bridge              local
-60a93872f2c7        none                    null                local
-2. Run Docker image of ElasticSearch
-    ```tcsh
-    $ docker network create <NETWORK_NAME>
-    $ docker run -d --name elasticsearch --restart always --net <NETWORK_NAME> -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:6.6.1
+        NETWORK ID      NAME                DRIVER          SCOPE
+        1005b83d5ef6    bridge              bridge          local
+        b7f8d6aa972f    host                host            local
+        bc4094b76759    <NETWORK_NAME>      bridge          local
+        ...
+2. Start
+    * Run Docker image of ElasticSearch
+        ```tcsh
+        $ docker run -d --name elasticsearch --restart always --net <NETWORK_NAME> -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:6.6.1
+        ```
+3. Test
+    * Create an index
+        ```tcsh
+        $ curl -X PUT "http://localhost:9200/<INDEX_NAME>?pretty"
+        {
+            "acknowledged" : true,
+            "shards_acknowledged" : true,
+            "index" : "<INDEX_NAME>"
+        }
+        ```
+    * Insert data to index
+        ```tcsh
+        $ curl -X POST "http://localhost:9200/<INDEX_NAME>?_create"
 Installing GitLab
 ------
