@@ -97,8 +97,8 @@ Installing Nexus Repository Manager
     * Show the admin password with the command:
         ```
         $ cat nexus-data/admin.password
-        (copy then type "exit" to exit out of container)
         ```
+        Copy then type "exit" to exit out of container
 3. Admin Login
     * Browse to http://localhost:8081 (it might take a few minutes to finish setting up)
     * Expected page should be:
@@ -168,6 +168,49 @@ Installing Nexus Repository Manager
         ```
 Installing Kafka Message Brokers
 ------
+1. Grab IP address
+    * On MacOS, open a ```Terminal``` and enter the command:
+
+        ```tcsh
+        $ ipconfig getifaddr en0
+        ```
+        Try "en1" instead of "en0" if nothing returns
+    * On Windows, open a ```Command Prompt``` and enter the command:
+    
+        ```
+        C:\Users\Name> ipconfig
+        ```
+        For wired, "IPv4 Address" under "Ethernet adapter Ethernet"
+        
+        For wireless, "IPv4 Address" under "Wireless LAN adapter Wi-Fi"
+        
+2. Create the ```docker-compose.yml``` file with the IP address
+
+    ```yaml
+    version: '2'
+    services:
+      zookeeper:
+        image: wurstmeister/zookeeper
+        ports:
+          - "2181:2181"
+      kafka:
+        image: wurstmeister/kafka
+        ports:
+          - "9092:9092"
+        environment:
+          KAFKA_ADVERTISED_HOST_NAME: <IP_Address>
+          KAFKA_CREATE_TOPICS: "test:1:1"
+          KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+        volumes:
+          - /var/run/docker.sock:/var/run/docker.sock
+    ```
+3. Start Container
+
+    ```tcsh
+    $ docker-compose up -d
+    ```
+    Must be in same directory where the ```docker-compose.yml``` file was created
+
 Installing ElasticSearch Search Engine
 ------
 Installing GitLab
