@@ -262,8 +262,16 @@ Installing Kafka Message Brokers
         ```
 5. Stop
     * Must explicitly shut down
-        ```
+        ```tcsh
         $ docker-compose down
+        ```
+    * Expected output:
+        ```
+        Stopping projects_zookeeper_1 ... done
+        Stopping projects_kafka_1     ... done
+        Removing projects_zookeeper_1 ... done
+        Removing projects_kafka_1     ... done
+        Removing network projects_default
         ```
 Installing ElasticSearch Search Engine
 ------
