@@ -221,10 +221,10 @@ Installing Kafka Message Brokers
         ...
         ```
     * Create a topic
-        ```tcsh
+        ```
         $ docker exec -it <CONTAINER_ID> kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partition 1 --topic test
         ```
-        * Verify topic
+        * Verify created topic
         ```
         $ docker exec -it <CONTAINER_ID> kafka-topics.sh --list --bootstrap-server localhost:9092
         ```
@@ -249,7 +249,17 @@ Installing Kafka Message Brokers
         ```
         Press ```Control``` + ```c``` to exit
     * Delete a topic
-
+        ```
+        $ docker exec -it <CONTAINER_ID> kafka-topics.sh --delete --bootstrap-server localhost:9092 --topic test
+        ```
+        * Verify deleted topic
+        ```
+        $ docker exec -it <CONTAINER_ID> kafka-topics.sh --list --bootstrap-server localhost:9092
+        ```
+        * Topic should be included in the expected output:
+        ```
+        __consumer_offsets
+        ```
 Installing ElasticSearch Search Engine
 ------
 Installing GitLab
