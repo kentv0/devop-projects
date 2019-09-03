@@ -208,18 +208,14 @@ Setting Up Build Environment
     version  = 1.0.0-SNAPSHOT
     release  = 1
 
-    # 3rd Party Dependency
     versionSpringCloud            = Finchley.M9
     versionSpringPlatform         = Cairo-RELEASE
     versionSpringBootPlugin       = 2.0.1.RELEASE
     versionSpringDependencyPlugin = 1.0.3.RELEASE
-
     version_swagger               = 2.6.1
     version_swagger_ui            = 2.5.0
-
     versionGradleWrapper          = 4.0.1
 
-    # Nexus Repository URLs
     mavenRepoUrl          = http://localhost:8081/repository/kentvo-central
     mavenRepoReleasesUrl  = http://localhost:8081/repository/kentvo-releases
     mavenRepoSnapshotsUrl = http://localhost:8081/repository/kentvo-snapshots
