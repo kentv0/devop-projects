@@ -373,7 +373,7 @@ Installing GitLab
 ------
 1. Run Docker image of GitLab
     ```tcsh
-    sudo docker run --detach \
+    $ sudo docker run --detach \
       --hostname gitlab.example.com \
       --publish 443:443 --publish 80:80 --publish 22:22 \
       --name gitlab \
