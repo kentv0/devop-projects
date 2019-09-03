@@ -256,7 +256,7 @@ Installing Kafka Message Brokers
         ```
         $ docker exec -it <CONTAINER_ID> kafka-topics.sh --list --bootstrap-server localhost:9092
         ```
-        * Topic should be included in the expected output:
+        * Topic should NOT be included in the expected output:
         ```
         __consumer_offsets
         ```
