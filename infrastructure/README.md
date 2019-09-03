@@ -216,10 +216,11 @@ Installing Kafka Message Brokers
     * Copy container ID
         ```tcsh
         $ docker ps
-        
+        CONTAINER ID    IMAGE               COMMAND             CREATED         STATUS          PORTS                   NAMES
+        <CONTAINER_ID>  wurstmeister/kafka  "start-kafka.sh"    3 weeks ago     Up 51 minutes   0.0.0.0:9092->9092/tcp  projects_kafka_1
+        ...
         ```
     * Create a topic
-        Grab the container ID for Kafka (see step 2 of "Installing Nexus Repository Manager") 
         ```tcsh
         $ docker exec -it <CONTAINER_ID> kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partition 1 --topic test
         ```
@@ -233,10 +234,20 @@ Installing Kafka Message Brokers
         test
         ```
     * Send messages
-        
-    
+        ```
+        $ docker exec -it <CONTAINER_ID> kafka-console-producer.sh --broker-list localhost:9092 --topic test
+        > This is a message
+        > This is another message
+        ```
+        Press ```Control``` + ```c``` to exit
     * Consume messages
-    
+        ```
+        $ docker exec -it <CONTAINER_ID> kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
+        This is a message
+        This is another message
+        Processed a total of 2 messages
+        ```
+        Press ```Control``` + ```c``` to exit
     * Delete a topic
 
 Installing ElasticSearch Search Engine
