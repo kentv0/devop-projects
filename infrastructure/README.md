@@ -386,7 +386,7 @@ Installing GitLab
 2. Admin login
     * Go to the web interface
         * http://localhost/
-        * It may take a long time to start up. You can track this process with the command:
+        * It may take a long time to start up. You can track status with the command:
             ```tcsh
             $ sudo docker logs -f gitlab
             ```
