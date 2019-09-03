@@ -40,7 +40,7 @@ Installing Docker Desktop
         $ docker version
         ```
     * Expected output should be:
-        ```tcsh
+        ```
         Client: Docker Engine - Community
          Version:           19.03.1
          API version:       1.40
@@ -85,14 +85,14 @@ Installing Nexus Repository Manager
         ```
     * Expected output should be:
         ```tcsh
-        CONTAINER ID    IMAGE               COMMAND                     CREATED         STATUS          PORTS                       NAMES
-        1234abcd        sonatype/nexus3     "sh -c ${SONATYPE_DI..."    4 weeks ago     Up 1 second     0.0.0.0:8081->8081/tcp      nexus
+        CONTAINER ID        IMAGE               COMMAND                     CREATED         STATUS          PORTS                       NAMES
+        <CONTAINER_ID>      sonatype/nexus3     "sh -c ${SONATYPE_DI..."    4 weeks ago     Up 1 second     0.0.0.0:8081->8081/tcp      nexus
         ```
     * Copy container ID for Nexus (required for next step)
 2. Admin Password
     * SSH into the Nexus container with the ID and the command:
-        ```tcsh
-        $ docker exec -it 1234abcd /bin/bash
+        ```
+        $ docker exec -it <CONTAINER_ID> /bin/bash
         ```
     * Show the admin password with the command:
         ```
@@ -206,12 +206,38 @@ Installing Kafka Message Brokers
         volumes:
           - /var/run/docker.sock:/var/run/docker.sock
     ```
-3. Start Container
-
+3. Start container
+    Must be in same directory where the ```docker-compose.yml``` file was created
     ```tcsh
     $ docker-compose up -d
     ```
-    Must be in same directory where the ```docker-compose.yml``` file was created
+    The "-d" option detaches the container and starts it in the background
+4. Test
+    * Copy container ID
+        ```tcsh
+        $ docker ps
+        
+        ```
+    * Create a topic
+        Grab the container ID for Kafka (see step 2 of "Installing Nexus Repository Manager") 
+        ```tcsh
+        $ docker exec -it <CONTAINER_ID> kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partition 1 --topic test
+        ```
+        * Verify topic
+        ```
+        $ docker exec -it <CONTAINER_ID> kafka-topics.sh --list --bootstrap-server localhost:9092
+        ```
+        * Topic should be included in the expected output:
+        ```
+        __consumer_offsets
+        test
+        ```
+    * Send messages
+        
+    
+    * Consume messages
+    
+    * Delete a topic
 
 Installing ElasticSearch Search Engine
 ------
