@@ -299,7 +299,7 @@ Installing ElasticSearch Search Engine
 3. Test
     * Create an index
         ```tcsh
-        $ curl -X PUT "http://localhost:9200/<INDEX_NAME>?pretty"
+        $ curl -XPUT "http://localhost:9200/<INDEX_NAME>?pretty"
         {
             "acknowledged" : true,
             "shards_acknowledged" : true,
@@ -358,6 +358,15 @@ Installing ElasticSearch Search Engine
               }
             ]
           }
+        }
+        ```
+    * Delete index
+        ```tcsh
+        curl -XDELETE 'http://localhost:9200/<INDEX_NAME>'
+        ```
+        ```json
+        {
+          "acknowledged" : true
         }
         ```
 Installing GitLab
