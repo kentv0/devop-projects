@@ -105,7 +105,7 @@ Installing Nexus Repository Manager
       It might take a few minutes to finish setting up
     * Expected page should be:
     
-        ![alt text](https://raw.githubusercontent.com/kentv0/devops-project/master/infrastructure/nexus_welcome.jpg "Login")
+        ![alt text](https://raw.githubusercontent.com/kentv0/devops-project/master/infrastructure/nexus_welcome.jpg "Nexus Login")
     * Click ```Sign in``` from the top of the page
         ```
         Username: admin
@@ -371,3 +371,26 @@ Installing ElasticSearch Search Engine
         ```
 Installing GitLab
 ------
+1. Run Docker image of GitLab
+    ```tcsh
+    sudo docker run --detach \
+      --hostname gitlab.example.com \
+      --publish 443:443 --publish 80:80 --publish 22:22 \
+      --name gitlab \
+      --restart always \
+      --volume /srv/gitlab/config:/etc/gitlab \
+      --volume /srv/gitlab/logs:/var/log/gitlab \
+      --volume /srv/gitlab/data:/var/opt/gitlab \
+      gitlab/gitlab-ce:latest
+    ```
+2. Admin login
+    * Go to the web interface
+        * http://localhost/
+        * It may take a long time to start up. You can track this process with the command:
+            ```tcsh
+            $ sudo docker logs -f gitlab
+            ```
+    * Expected page should be:
+    
+    ![alt text](https://raw.githubusercontent.com/kentv0/devops-project/master/infrastructure/gitlab_login.jpg "GitLab Login")
+    * Log in with username ```root``` and set up password
