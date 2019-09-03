@@ -275,5 +275,21 @@ Installing Kafka Message Brokers
         ```
 Installing ElasticSearch Search Engine
 ------
+1. Set Up Network
+    * Create a Docker network with the command:
+        ```tcsh
+        $ docker network create <NETWORK_NAME>
+        ```
+    * Verify created network
+        ```tcsh
+        $ docker network ls
+        ```
+    * Network should be included in the expected output:
+        ```
+        
+2. Run Docker image of ElasticSearch
+    ```tcsh
+    $ docker network create <NETWORK_NAME>
+    $ docker run -d --name elasticsearch --restart always --net <NETWORK_NAME> -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:6.6.1
 Installing GitLab
 ------
