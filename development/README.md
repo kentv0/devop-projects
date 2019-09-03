@@ -202,26 +202,25 @@ Setting Up Build Environment
         ```
 3. Gradle Properties
     * Define properties in the ```gradle.properties``` file
-    ```groovy
-    group    = com.kentvo.myapp.customer
-    artifact = myapp-customer
-    version  = 1.0.0-SNAPSHOT
-    release  = 1
+        ```groovy
+        group    = com.kentvo.myapp.customer
+        artifact = myapp-customer
+        version  = 1.0.0-SNAPSHOT
+        release  = 1
 
-    versionSpringCloud            = Finchley.M9
-    versionSpringPlatform         = Cairo-RELEASE
-    versionSpringBootPlugin       = 2.0.1.RELEASE
-    versionSpringDependencyPlugin = 1.0.3.RELEASE
-    version_swagger               = 2.6.1
-    version_swagger_ui            = 2.5.0
-    versionGradleWrapper          = 4.0.1
+        versionSpringCloud            = Finchley.M9
+        versionSpringPlatform         = Cairo-RELEASE
+        versionSpringBootPlugin       = 2.0.1.RELEASE
+        versionSpringDependencyPlugin = 1.0.3.RELEASE
+        version_swagger               = 2.6.1
+        version_swagger_ui            = 2.5.0
+        versionGradleWrapper          = 4.0.1
 
-    mavenRepoUrl          = http://localhost:8081/repository/kentvo-central
-    mavenRepoReleasesUrl  = http://localhost:8081/repository/kentvo-releases
-    mavenRepoSnapshotsUrl = http://localhost:8081/repository/kentvo-snapshots
-    ```
+        mavenRepoUrl          = http://localhost:8081/repository/kentvo-central
+        mavenRepoReleasesUrl  = http://localhost:8081/repository/kentvo-releases
+        mavenRepoSnapshotsUrl = http://localhost:8081/repository/kentvo-snapshots
+        ```
 4. Wrapper Script
-
     *
     *
 
