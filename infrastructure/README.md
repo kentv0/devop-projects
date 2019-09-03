@@ -101,8 +101,8 @@ Installing Nexus Repository Manager
         Copy then type "exit" to exit out of container
 3. Admin Login
     * Browse to http://localhost:8081
-    
-    It might take a few minutes to finish setting up
+
+      It might take a few minutes to finish setting up
     * Expected page should be:
     
         ![alt text](https://raw.githubusercontent.com/kentv0/devops-project/master/infrastructure/nexus_welcome.jpg "Login")
