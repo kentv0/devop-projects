@@ -266,7 +266,7 @@ Installing Kafka Message Brokers
         $ docker-compose down
         ```
     * Expected output:
-        ```
+        ```tcsh
         Stopping projects_zookeeper_1 ... done
         Stopping projects_kafka_1     ... done
         Removing projects_zookeeper_1 ... done
