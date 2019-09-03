@@ -286,7 +286,12 @@ Installing ElasticSearch Search Engine
         ```
     * Network should be included in the expected output:
         ```
-        
+        NETWORK ID          NAME                    DRIVER              SCOPE
+1005b83d5ef6        bridge                  bridge              local
+b7f8d6aa972f        host                    host                local
+bc4094b76759        infra_example_default   bridge              local
+d93c28c958f8        my-network              bridge              local
+60a93872f2c7        none                    null                local
 2. Run Docker image of ElasticSearch
     ```tcsh
     $ docker network create <NETWORK_NAME>
