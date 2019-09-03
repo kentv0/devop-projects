@@ -30,9 +30,9 @@ Installing Gradle Build Tool
 ------
 1. Download
     * Open a ```Terminal```
-    * Download Gradle version 4.0.1 with the command:
+    * Download Gradle version ```4.0.1``` with the command:
         ```tcsh
-            $ curl -L -O https://services.gradle.org/distributions/gradle-4.0.1-bin.zip
+        $ curl -L -O https://services.gradle.org/distributions/gradle-4.0.1-bin.zip
         ```
 2. Extract
     * Create directory
@@ -45,8 +45,9 @@ Installing Gradle Build Tool
         ```
 3. Configure
     * Set PATH environment variable
+
         For bash:
-        ```tcsh
+        ```bash
         $ export PATH=$PATH:/opt/gradle/gradle-4.0.1/bin
         ```
         For tcsh or csh:
