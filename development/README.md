@@ -87,7 +87,7 @@ Setting Up Build Environment
         $ cd projects
         ```
     * Create the "build.gradle" file there
-        ```groovy
+        ```groovy {.line-numbers}
         buildscript {
             repositories {
                 mavenLocal()
