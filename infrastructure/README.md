@@ -308,13 +308,26 @@ Installing ElasticSearch Search Engine
         ```
     * Insert data to index
         ```tcsh
-        $ curl -H 'Content-Type: application/json' -XPUT 'localhost:9200/<INDEX_NAME>/<INDEX_TYPE>/<DATA_NAME>' -d
+        $ curl -H 'Content-Type: application/json' -XPUT 'localhost:9200/<INDEX_NAME>/<INDEX_TYPE>/<ID>' -d
         '{
             "name" : "John Doe"
         }'
         ```
         ```json
-        
+        {
+          "_index" : "<INDEX_NAME>",
+          "_type" : "<INDEX_TYPE>",
+          "_id" : "<ID>",
+          "_version" : 1,
+          "result" : "created",
+          "_shards" : {
+            "total" : 2,
+            "successful" : 1,
+            "failed" : 0
+          },
+          "_seq_no" : 0,
+          "_primary_term" : 1
+        }
         ```
 
 Installing GitLab
