@@ -206,7 +206,7 @@ Installing Kafka Message Brokers
         volumes:
           - /var/run/docker.sock:/var/run/docker.sock
     ```
-3. Start container
+3. Start
     Must be in same directory where the ```docker-compose.yml``` file was created
     ```tcsh
     $ docker-compose up -d
@@ -259,6 +259,11 @@ Installing Kafka Message Brokers
         * Topic should NOT be included in the expected output:
         ```
         __consumer_offsets
+        ```
+5. Stop
+    * Must explicitly shut down
+        ```
+        $ docker-compose down
         ```
 Installing ElasticSearch Search Engine
 ------
