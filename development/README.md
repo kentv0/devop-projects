@@ -223,7 +223,7 @@ Setting Up Build Environment
 4. Wrapper Script
     * Open a ```Terminal```
     * Change into the project's root directory
-        ```tcsh
+        ```
         $ cd projects/
         ```
     * Generate wrapper files with the command:
