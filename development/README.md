@@ -221,8 +221,15 @@ Setting Up Build Environment
         mavenRepoSnapshotsUrl = http://localhost:8081/repository/kentvo-snapshots
         ```
 4. Wrapper Script
-    *
-    *
+    * Open a ```Terminal```
+    * Change into the project's root directory
+        ```tcsh
+        $ cd projects/
+        ```
+    * Generate wrapper files with the command:
+        ```tcsh
+        $ gradle wrapper --gradle-version=4.0.1 --distribution-type=bin
+        ```
 
 Setting Up Spring Boot
 ------
